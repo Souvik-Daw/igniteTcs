@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+      body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: left;
+    background-color: lightblue;
+    color: black;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color:lightblue;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+    </style>
+</head>
+<body>
+    
+<div class="about-section">
+    <h1>About Us</h1>
+    <p>
+      <h4>Our Story<br></h4>
+      We're a sincere company with a straightforward vision. 
+      We believe that there is an amazing amount to be learned 
+      by working in a real-world web production environment,
+      alongside other like-minded people.With this in mind,we began
+      to create this website to gather people together and discuss 
+      topics and also get an effective solution.
+      <h4>What we bring to the table<br></h4>
+      We've had an amazing journey coming to where we are
+       today and now feel confident that we can provide you an
+       effective solution in a timely manner.We have extensive
+       skills in the following areas:<br>
+       * Crafting clean, accessible HTMl<br>
+       * Writing CSS to make your site look beautiful<br>
+       * Writing functional, useful code to power websites<br>
+       * Giving you, as a client, the best possible experience in working with us
+    </p>
+</div>
+  
+  <h2 style="text-align:left">Our Team</h2>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="{{url_for('static', filename='rithya.jpeg')}}" alt="Rithya" style="width:100%">
+        <div class="container">
+          <h2>Rithya Bonala</h2>
+          <p class="title">Frontend Developer</p>
+          <p>Rithya Bonala is an Ignite trainee at TCS.
+          She is from Telangana.
+        she has completed BSC from RBVRR women's college, Hyderabad
+        She has  interest in Web Development.</p>
+          <p>rithyabonala05@gmail.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="{{url_for('static', filename='souvik.jpeg')}}" alt="Souvik" style="width:100%">
+        <div class="container">
+          <h2>Souvik Daw</h2>
+          <p class="title">Backend Developer</p>
+          <p>Souvik Daw is an Ignite trainee at TCS.
+            Souvik graduated from Heritage Academy with a Bachelor degree
+             in computer application.
+            His passion includes Web and Android Development.He is
+            currently interested in Competitive coding.
+          </p>
+          <p>souvik@example.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <img src="{{url_for('static', filename='adarsh.jpeg')}}" alt="Adarsh" style="width:100%">
+        <div class="container">
+          <h2>Adarsh Kumar</h2>
+          <p class="title">Backend Developer</p>
+          <p>Adarsh Kumar is an Ignite trainee at TCS.
+            He is pursuing graduation from MMH Arabic & Persian University
+            with a Bachelor degree in computer application. He is good in Java
+            and C++,DSA.
+          </p>
+          <p>adarsh@example.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+          <img src="{{url_for('static', filename='isha.jpeg')}}" alt="Isha" style="width:100%">
+          <div class="container">
+            <h2>Isha Tallewar</h2>
+            <p class="title">Frontend Developer</p>
+            <p>Isha Tallewar is Ignite trainee at TCS.
+            She has completed BCA from Nagpur University.
+            She has also completed career oriented course in hardware and networking.<br>
+            Currently interest in Web Development.
+            </p>
+            <p>ishatallewar1234@gmail.com</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+</body>
+</html>

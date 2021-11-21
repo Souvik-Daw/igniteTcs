@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+   
+    <style>
+        body{
+    margin:0;
+    padding:0;
+    background-color: lightblue;
+    font-family: sans-serif;
+}
+.team-container
+{
+    width:100%;
+    height: auto;
+ 
+}
+.text
+{
+    color:black;
+    font-size: 25px;
+    margin-top: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+ 
+}
+.row
+{
+    width: 60%;
+    margin:auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+}
+@media(max-width: 768px)
+{
+    .row{
+        width: 100%;
+    }
+}
+.profile-card
+{
+    background-color: #ffffff;
+    width: 270px;
+    height: 250px;
+    margin: 20px 10px 10px 10px;
+}
+@media(max-width: 468px)
+{
+    .profile-card
+    {
+        width: 290px;
+        height: 250px;
+    }
+}
+.profile-content
+{
+    padding:15px;
+}
+
+
+.desc
+{
+    text-align: center;
+}
+.desc h2
+{
+    color: black;
+    font-size: 20px;
+}
+.desc p{
+    font-size: 13px;
+    line-height: 1.3em;
+    margin-top: -10px;
+    color: #000000;
+     
+}
+.btn-div
+{
+    text-align: center;
+}
+.btn
+{
+    background-color: blue;
+    color: #ffffff;
+    width: 150px;
+    cursor: pointer;
+    height: 38px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 3px 3px 3px 3px #e6e6e6;
+    border-radius: 3px;
+    outline:none;
+    border:none;
+    text-transform: uppercase;
+}
+.qwert{
+    float:right;
+    margin-right: 20px;
+}
+    </style>
+</head>
+<body>
+    <button class="qwert btn" onclick="window.location='http://localhost:8000/dropsession'" type="submit">Logout</button>
+    <div class="container">
+        <div class="team_container">
+            <div class="text">Hello {{name}} your Categories are:-</div>
+        </div>
+        <div class="row">
+            <div class="profile-card">
+                <div class="profile-content">
+                    <div class="desc">
+                        <h2>Java</h2>
+                        <p> </p>
+                    </div><br><br>
+                    <div class="btn-div">
+                        <button class="btn" style="padding-right: 10px;" onclick="window.location='http://localhost:8000/java'" type="submit">java</button>
+                    </div>
+                </div>
+            </div>
+        
+             <div class="profile-card">
+                <div class="profile-content">
+                    <div class="desc">
+                        <h2>Python</h2>
+                        <p></p>
+                    </div><br><br>
+                    <div class="btn-div">
+                        <button class="btn" style="padding-right: 10px;" onclick="window.location='http://localhost:8000/python'" type="submit">python</button>
+                    </div>
+                </div>
+            </div>
+             <div class="profile-card">
+                <div class="profile-content">
+                    <div class="desc">
+                        <h2>Cyber Security</h2>
+                        <p> </p>
+                    </div><br><br>
+                    <div class="btn-div">
+                        <button class="btn" style="padding-right: 10px;" onclick="window.location='http://localhost:8000/cs'" type="submit">cs</button>
+                    </div>
+                </div>
+            </div>
+        
+             <div class="profile-card">
+                <div class="profile-content">
+                    
+                    <div class="desc">
+                        <h2>Digital Handloom</h2>
+                        <p> </p>
+                    </div><br><br>
+                    <div class="btn-div">
+                        <button class="btn" style="padding-right: 10px;" onclick="window.location='http://localhost:8000/dh'" type="submit">dh</button>
+                        
+                    </div>
+                </div>
+            </div>
+           
+             <div class="profile-card">
+                <div class="profile-content">
+                    
+                    <div class="desc">
+                        <h2>AI</h2>
+                        <p> </p>
+                    </div><br><br>
+                    <div class="btn-div">
+                        <button class="btn" style="padding-right: 10px;" onclick="window.location='http://localhost:8000/ai'" type="submit">ai</button>
+                    </div>
+                </div>
+            </div>
+           
+             <div class="profile-card">
+                <div class="profile-content">
+                    
+                    <div class="desc">
+                        <h2>Others</h2>
+                        <p> </p>
+                    </div><br><br>
+                    <div class="btn-div">
+                        <button class="btn" style="padding-right: 10px;" onclick="window.location='http://localhost:8000/others'" type="submit">others</button>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>

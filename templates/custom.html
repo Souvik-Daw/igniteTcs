@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: lightblue;
+            padding: 20px;
+            font-family: 'Times New Roman';
+            color: blue;
+        }
+
+        .item {
+            border-radius: 5px;
+            padding: 20px;
+            font-family: 'Times New Roman';
+            color: black;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid white;
+            border-radius: 4px;
+            resize: vertical;
+
+        }
+
+
+        label {
+            padding: 12px 12px 12px 0;
+
+        }
+
+        .item1 {
+            border-radius: 5px;
+            padding: 20px;
+            font-family: 'Times New Roman';
+            color: black;
+        }
+
+        .item1 input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid white;
+            border-radius: 4px;
+            resize: vertical;
+
+        }
+
+        .item1 h4 {
+            font-family: 'Times New Roman';
+            color: black
+        }
+
+        .item1 input[type=submit] {
+            background-color: blue;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Question-</h1>
+        {%for x in allTodo|reverse %}
+        <div class="item">
+            <form name="form1">
+                <div class="row">
+                    <div class="col-100">
+                        <label for="name"><b>Name:-</b> {{x.name}}</label>
+                    </div>
+                    
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-100">
+                        <label for="title"><b>Title:-</b> {{x.title}}</label>
+                    </div>
+                    
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject"><b>Body:-</b> {{x.desc}}</label>
+                    </div>
+                
+                     
+                </div>
+                <br>
+            </form>
+        </div>
+        <br><br><br><br><br><br>
+        <h2>Showing Data</h2>
+        {%for y in allTodo1|reverse %}
+        <div class="item1">
+            <form name="form2">
+                <h4>Name:
+                    <p>{{y.name}}</p>
+                    </h4>
+                    
+                <h4>Body:<br>
+                    <p>{{y.desc}}</p>
+                    </h4>
+            </form>
+            <hr>
+        </div>
+        {% endfor %}
+        <h2>Add Comment</h2>
+        <div class="item1">
+            <form name="form2" action="/{{x.sno}}" method="POST">
+                <h4>Body:<br>
+                    <br>
+                    <textarea id="subject" name="subject" placeholder="Write something.."
+                        style="height:200px"></textarea><br>
+                    <br>
+                    <div class="row">
+                        <input type="submit" value="Submit">
+                    </div>
+            </form>
+        </div>
+
+    </div>
+    </div>
+
+    </div>
+    {% endfor %}
+</body>
+
+</html>
